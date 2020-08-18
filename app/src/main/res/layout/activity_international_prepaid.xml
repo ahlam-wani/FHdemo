@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:id="@+id/root_layout"
+    android:background="@drawable/background_bottom_reg"
+    android:layout_height="760dp"
+    tools:context=".international_prepaid">
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textview.MaterialTextView
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="242dp"
+        android:layout_height="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrow_back"
+        android:text="Choose Your Country"
+        android:textSize="24sp"
+        android:lineHeight="32sp"
+        android:letterSpacing="0"
+        android:textColor="#4f5661"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="47dp"
+        android:id="@+id/text_top"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_top_info"
+        android:layout_width="310dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/text_top"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Please Select the country of your mobile phone operator"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="18dp"
+        android:textSize="14sp"
+        android:lineHeight="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#58595b"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_top_info"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/TextAppearance.AppCompat.Small"
+        android:id="@+id/text2"
+        android:visibility="gone"
+        android:layout_width="310dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="25dp"
+        android:lineHeight="20sp"
+        android:text="Please Select your postpaid mobile operator"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#58595b"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view2" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text2"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/mobile_no"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="25dp"
+        android:textSize="14sp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="#109ad7"
+        android:hint="Enter moblie number(+91-xx-xx-xx-xxx)"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="#109ad7"
+        android:textStyle="bold"
+        android:textColorHint="#58595b"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view3" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_name"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="29dp"
+        android:textSize="14sp"
+        android:paddingBottom="10dp"
+        android:backgroundTint="#109ad7"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:textColor="#109ad7"
+        android:textStyle="bold"
+        android:textColorHint="#58595b"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_no" />
+    <Spinner
+          android:id="@+id/spinner"
+        android:layout_width="291dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#109ad7"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="29dp"
+        android:visibility="gone"
+         />
+    <include
+        android:id="@+id/layout_transaction"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        layout="@layout/transaction"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="24dp"
+
+        android:visibility="gone"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_22"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="or add from"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textColor="#58595b"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/text_beneficiary"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_no" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_beneficiary"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="52dp"
+        android:text="Beneficiary"
+        android:textColor="#109ad7"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobile_no" />
+    <ImageView
+          android:id="@+id/btn_click"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:background="@drawable/ic_primary_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="85dp"
+        android:alpha="0.42"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

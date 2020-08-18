@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_bottom_reg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp">
+
+        <ImageView
+            android:id="@+id/img_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@drawable/ic_otp_25_px"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textStyle="bold"
+            style="AppTextAppearance.Subtitle1.Bold"
+            android:textSize="24dp"
+            android:padding="4dp"
+            android:text="enter_otp"
+            android:textAlignment="textStart"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/pin_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_otp" />
+
+        <com.mukesh.OtpView
+            android:id="@id/pin_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:cursorVisible="false"
+            android:inputType="numberPassword"
+            android:imeOptions="actionDone"
+            android:padding="6dp"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="#0083c5"
+            app:itemCount="6"
+            app:itemSpacing="3dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_instruction"
+            app:layout_constraintEnd_toStartOf="@+id/iv_toggle_pin"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:lineColor="#00436a"
+            app:state_filled="true"
+            app:viewType="line" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/iv_toggle_pin"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:button="@drawable/ic_password_visible_eye"
+            android:buttonTint="#00436a"
+            android:gravity="bottom"
+            app:layout_constraintBottom_toBottomOf="@+id/pin_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/pin_view"
+            app:layout_constraintTop_toTopOf="@+id/pin_view"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/tv_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="resend_otp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pin_view"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+        <TextView
+            android:id="@+id/tv_resend_otp_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="resend_otp_2"
+            android:textColor="#30a7db"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/tv_resend_otp"
+            app:layout_constraintStart_toEndOf="@id/tv_resend_otp"
+            app:layout_constraintTop_toTopOf="@id/tv_resend_otp" />
+
+
+        <TextView
+            android:id="@+id/tv_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="pin_help_msg"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pin_view" />
+
+        <TextView
+            android:id="@+id/tv_opt_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="enter_otp_error"
+            android:textColor="colorRed"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instruction" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_primary_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_resend_otp"
+            app:layout_constraintVertical_bias="0.83" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

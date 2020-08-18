@@ -1,0 +1,143 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/layout_2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/text_transaction_detail"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:lineSpacingExtra="6sp"
+        android:textColor="#4f5661"
+        android:textSize="14sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:textStyle="bold"
+        android:text="Transaction Details" />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Plan-"
+            android:textColor="#58595b"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="INR 698"
+            android:textColor="#109ad7"
+            android:id="@+id/plan_recharge"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+
+        <TextView
+            android:id="@+id/text_2plan"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="60dp"
+            android:text="INR 698.00"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textColor="#58595b"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:id="@+id/ll_1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Billed amount"
+                android:textColor="#58595b"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                />
+            <TextView
+                android:id="@+id/billed_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INR 698.00"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="#58595b"
+                android:textStyle="bold"
+                android:layout_marginLeft="60dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payable Amount in AED"
+                android:textColor="#0083c5"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2" />
+            <EditText
+                android:id="@+id/edt_payable_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34.0"
+                android:backgroundTint="#109ad7"
+                android:paddingHorizontal="10dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="#109ad7"
+                android:layout_marginLeft="18dp"/>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="88dp"
+            android:layout_height="20dp"
+            android:text="Card Balance"
+            android:textColor="#58595b"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            />
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before Payment"
+                android:textColor="#58595b"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AED 60,622.75"
+                android:textStyle="bold"
+                android:id="@+id/Aed_before_payment"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="#58595b"
+                android:layout_marginLeft="60dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="After Payment"
+                android:textColor="#58595b"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AED 59,924.00"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="#58595b"
+                android:textStyle="bold"
+                android:id="@+id/Aed_after_payment"
+                android:layout_marginLeft="70dp"/>
+        </LinearLayout>
+</LinearLayout>
